@@ -3,6 +3,7 @@ package controller;
 import javafx.fxml.FXML;
 import javafx.scene.chart.LineChart;
 import logic.DBConnection;
+import modell.Article;
 
 public class ChartDataTestController {
     @FXML
@@ -13,5 +14,8 @@ public class ChartDataTestController {
         con.connect();
         con.getAllIOrderedtems();
         con.close();
+        for (Article article:Article.getArticleList()) {
+            System.out.println("ArticleID: " + article.getArticleID() + "| Name: " + article.getArticleName() + " | OrderID: " + article.getOrderID() + " | Date: " + article.getOrderID());
+        }
     }
 }
