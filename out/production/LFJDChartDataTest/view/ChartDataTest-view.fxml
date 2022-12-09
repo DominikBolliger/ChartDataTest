@@ -3,15 +3,15 @@
 <?import javafx.scene.chart.*?>
 <?import javafx.scene.layout.*?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" fx:controller="controller.ChartDataTestController" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ChartDataTestController">
    <children>
-      <VBox/>
-      <LineChart fx:id="lcDataChart">
+      <VBox />
+      <LineChart fx:id="lcDataChart" alternativeColumnFillVisible="true" createSymbols="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" title="Last Year" HBox.hgrow="ALWAYS">
         <xAxis>
-          <CategoryAxis side="BOTTOM" />
+          <NumberAxis label="Month" lowerBound="1.0" minorTickLength="1.0" minorTickVisible="false" side="BOTTOM" tickLength="5.0" tickUnit="1.0" upperBound="11.0" fx:id="xAxis" />
         </xAxis>
         <yAxis>
-          <NumberAxis side="LEFT" />
+          <NumberAxis fx:id="yAxis" label="Ammount" minorTickCount="10" side="LEFT" upperBound="400.0" />
         </yAxis>
       </LineChart>
    </children>

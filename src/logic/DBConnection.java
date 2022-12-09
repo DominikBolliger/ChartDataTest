@@ -41,8 +41,8 @@ public class DBConnection {
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery("Select position.positionID, `order`.orderid, article.articlename, article.articleID, `order`.orderdatetime\n" +
                                                 "from position\n" +
-                                                "Inner Join article on position.fk_articleID = article.articleID\n" +
-                                                "Inner Join `order` on position.fk_orderID = `order`.orderID\n" +
+                                                "left Join article on position.fk_articleID = article.articleID\n" +
+                                                "right Join `order` on position.fk_orderID = `order`.orderID\n" +
                                                 "order by position.positionID");
             while (rs.next()) {
                 new Article(rs.getString("articlename"), rs.getInt("articleid"), rs.getInt("orderID"),rs.getString("orderdatetime") );

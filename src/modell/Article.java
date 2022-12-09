@@ -9,7 +9,6 @@ public class Article {
     private int articleID;
     private int orderID;
     private String articleBuyDate;
-
     private static List<Article> articleList = new ArrayList<>();
 
     public Article(String articleName, int articleID, int orderID, String articleBuyDate) {
